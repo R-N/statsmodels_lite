@@ -59,16 +59,6 @@ CYTHON_MIN_VER = "3.0.10"  # released January 2023
 EXTRAS_REQUIRE = {
     "build": ["cython>=" + CYTHON_MIN_VER],
     "develop": ["cython>=" + CYTHON_MIN_VER] + DEVELOP_REQUIRES,
-    "docs": [
-        "sphinx",
-        "nbconvert",
-        "jupyter_client",
-        "ipykernel",
-        "matplotlib",
-        "nbformat",
-        "numpydoc",
-        "pandas-datareader",
-    ],
 }
 
 ###############################################################################
@@ -120,18 +110,6 @@ STATESPACE_RESULTS = "statsmodels.tsa.statespace.tests.results"
 
 ADDITIONAL_PACKAGE_DATA = {
     "statsmodels": FILES_TO_INCLUDE_IN_PACKAGE,
-    "statsmodels.datasets.tests": ["*.zip"],
-    "statsmodels.iolib.tests.results": ["*.dta"],
-    "statsmodels.stats.tests.results": ["*.json"],
-    "statsmodels.tsa.stl.tests.results": ["*.csv"],
-    "statsmodels.tsa.vector_ar.tests.results": ["*.npz", "*.dat"],
-    "statsmodels.stats.tests": ["*.txt"],
-    "statsmodels.stats.libqsturng": ["*.r", "*.txt", "*.dat"],
-    "statsmodels.stats.libqsturng.tests": ["*.csv", "*.dat"],
-    "statsmodels.sandbox.regression.tests": ["*.dta", "*.csv"],
-    STATESPACE_RESULTS: ["*.pkl", "*.csv"],
-    STATESPACE_RESULTS + ".frbny_nowcast": ["test*.mat"],
-    STATESPACE_RESULTS + ".frbny_nowcast.Nowcasting.data.US": ["*.csv"],
 }
 
 ##############################################################################
@@ -150,47 +128,9 @@ DEFINE_MACROS = [
 
 
 exts = dict(
-    _stl={"source": "statsmodels/tsa/stl/_stl.pyx"},
-    _exponential_smoothers={
-        "source": "statsmodels/tsa/holtwinters/_exponential_smoothers.pyx"
-    },  # noqa: E501
-    _ets_smooth={
-        "source": "statsmodels/tsa/exponential_smoothing/_ets_smooth.pyx"
-    },  # noqa: E501
-    _innovations={"source": "statsmodels/tsa/_innovations.pyx"},
-    _hamilton_filter={
-        "source": "statsmodels/tsa/regime_switching/_hamilton_filter.pyx.in"
-    },  # noqa: E501
-    _kim_smoother={
-        "source": "statsmodels/tsa/regime_switching/_kim_smoother.pyx.in"
-    },  # noqa: E501
-    _arma_innovations={
-        "source": "statsmodels/tsa/innovations/_arma_innovations.pyx.in"
-    },  # noqa: E501
-    linbin={"source": "statsmodels/nonparametric/linbin.pyx"},
-    _qn={"source": "statsmodels/robust/_qn.pyx"},
-    _smoothers_lowess={
-        "source": "statsmodels/nonparametric/_smoothers_lowess.pyx"
-    },  # noqa: E501
 )
 
 statespace_exts = [
-    "statsmodels/tsa/statespace/_initialization.pyx.in",
-    "statsmodels/tsa/statespace/_representation.pyx.in",
-    "statsmodels/tsa/statespace/_kalman_filter.pyx.in",
-    "statsmodels/tsa/statespace/_filters/_conventional.pyx.in",
-    "statsmodels/tsa/statespace/_filters/_inversions.pyx.in",
-    "statsmodels/tsa/statespace/_filters/_univariate.pyx.in",
-    "statsmodels/tsa/statespace/_filters/_univariate_diffuse.pyx.in",
-    "statsmodels/tsa/statespace/_kalman_smoother.pyx.in",
-    "statsmodels/tsa/statespace/_smoothers/_alternative.pyx.in",
-    "statsmodels/tsa/statespace/_smoothers/_classical.pyx.in",
-    "statsmodels/tsa/statespace/_smoothers/_conventional.pyx.in",
-    "statsmodels/tsa/statespace/_smoothers/_univariate.pyx.in",
-    "statsmodels/tsa/statespace/_smoothers/_univariate_diffuse.pyx.in",
-    "statsmodels/tsa/statespace/_simulation_smoother.pyx.in",
-    "statsmodels/tsa/statespace/_cfa_simulation_smoother.pyx.in",
-    "statsmodels/tsa/statespace/_tools.pyx.in",
 ]
 
 
