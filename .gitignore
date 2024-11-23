@@ -1,162 +1,113 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+*.py[oc]
+# setup.py working directory
+build
+# setup.py dist directory
+dist
+#docs build and others
+#generated  #not yet? generated for dataset not rebuild
+docs/source/generated
+docs/source/dev/generated
+docs/source/examples/generated
+docs/source/datasets/generated
+docs/source/examples/index.rst
+docs/source/examples/notebooks/generated
+docs/source/datasets/statsmodels.datasets.*
+docs/source/savefig
+docs/gettingstarted_0.png
+examples/executed
 
-# C extensions
+#setuptools-scm generated version file
+statsmodels/_version.py
+# Generated c source and built extensions
+# and Byte-compiled / optimized / DLL files
+*.c
 *.so
+*.py[cod]
+__pycache__/
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+# repository directories for bzr-git
+.bzr
+.git
+marks.git
+marks.bzr
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-.pybuilder/
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-#   For a library or package, you might want to ignore these files since the code is
-#   intended to run in multiple environments; otherwise, check them in:
-# .python-version
-
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# poetry
-#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-#poetry.lock
-
-# pdm
-#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
-#pdm.lock
-#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
-#   in version control.
-#   https://pdm.fming.dev/latest/usage/project/#working-with-version-control
-.pdm.toml
-.pdm-python
-.pdm-build/
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
+# virtualenv stuff
 .venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
 
-# Spyder project settings
-.spyderproject
-.spyproject
+# Editor temporary/working/backup files
+*$
+.*.sw[nop]
+.sw[nop]
+*~
+[#]*#
+.#*
+*.bak
+*.tmp
+/.idea
+*.tgz
+*.rej
+*.org
+.project
+*.diff
+.settings/
+*.svn/
+*.log.py
+# Egg metadata
+*.egg-info
+# The shelf plugin uses this dir
+.shelf
+# Mac droppings
+.DS_Store
+help
 
-# Rope project settings
-.ropeproject
+# Coverage report output
+.coverage
+coverage_html_report/
 
-# mkdocs documentation
-/site
+# Idea IDE
+.idea/
 
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
+# VS Code
+.vscode/
+.vs/
 
-# Pyre type checker
-.pyre/
+# Project specific
+statsmodels/version.py
+statsmodels.egg-info/
+iterate.dat
+hash_dict.pickle
+rehab.table
+salary.table
+.ipynb_checkpoints
+statsmodels/tsa/statespace/_statespace.pyx
+statsmodels/tsa/innovations/_arma_innovations.pyx
+statsmodels/tsa/regime_switching/_hamilton_filter.pyx
+statsmodels/tsa/regime_switching/_kim_smoother.pyx
+statsmodels/tsa/statespace/_initialization.pyx
+statsmodels/tsa/statespace/_representation.pyx
+statsmodels/tsa/statespace/_kalman_filter.pyx
+statsmodels/tsa/statespace/_kalman_smoother.pyx
+statsmodels/tsa/statespace/_simulation_smoother.pyx
+statsmodels/tsa/statespace/_cfa_simulation_smoother.pyx
+statsmodels/tsa/statespace/_tools.pyx
+statsmodels/tsa/statespace/_filters/_conventional.pyx
+statsmodels/tsa/statespace/_filters/_inversions.pyx
+statsmodels/tsa/statespace/_filters/_univariate.pyx
+statsmodels/tsa/statespace/_filters/_univariate_diffuse.pyx
+statsmodels/tsa/statespace/_smoothers/_conventional.pyx
+statsmodels/tsa/statespace/_smoothers/_univariate.pyx
+statsmodels/tsa/statespace/_smoothers/_univariate_diffuse.pyx
+statsmodels/tsa/statespace/_smoothers/_alternative.pyx
+statsmodels/tsa/statespace/_smoothers/_classical.pyx
 
-# pytype static type analyzer
-.pytype/
+#pytest
+.cache
+.pytest_cache
 
-# Cython debug symbols
-cython_debug/
+# Temporary copies for packaging
+statsmodels/setup.cfg
+statsmodels/LICENSE.txt
 
-# PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+# Dataset downloads
+statsmodels/datasets/tests/*.zip
