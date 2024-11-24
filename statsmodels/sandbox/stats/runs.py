@@ -1,6 +1,6 @@
 import numpy as np
 from functools import wraps
-from ...tools.validation import validation as v
+from ...tools import validation as v
 def array_like(
     pos,
     name,
